@@ -1,0 +1,14 @@
+CREATE TABLE people_vehicle (
+  id INT unsigned NOT NULL,
+  person_id INT,
+  Vehical_ID INT,
+  name varchar(255)
+)
+
+
+SELECT  v.Name, p.[Name]  into people_vehicle 
+from vehical v, people p
+where v.PersonID as Vehical_ID = p.PersonID 
+
+
+SELECT * FROM people_vehicle;
